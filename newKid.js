@@ -27,6 +27,10 @@ botNewKid.on("message", message => {
     if(command === "tired") {
         message.channel.sendMessage({files: ["https://media1.giphy.com/media/3M4NpbLCTxBqU/giphy.gif"]});
     }
+
+    if(command === "thanks") {
+        message.channel.sendMessage(":slight_smile:");
+    }
 });
 
 botNewKid.login(TOKEN);

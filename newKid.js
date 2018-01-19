@@ -2,7 +2,9 @@ const Discord = require("discord.js");
 
 const botNewKid  = new Discord.Client();
 
-const TOKEN = "token";
+const TOKEN = "";
+
+const prefix = "!";
 
 botNewKid.on("ready", () => {
     console.log(":neutral_face:");
@@ -13,6 +15,13 @@ botNewKid.on("message", message => {
     
     if(message.isMentioned(botNewKid.user)) {
         message.channel.sendMessage(":neutral_face:");
+    }
+
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if(command === "reasontolive") {
+        message.channel.sendMessage("kyman");
     }
 });
 

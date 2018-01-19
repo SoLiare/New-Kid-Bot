@@ -23,6 +23,10 @@ botNewKid.on("message", message => {
     if(command === "reasontolive") {
         message.channel.sendMessage("kyman");
     }
+
+    if(command === "tired") {
+        message.channel.sendMessage({files: ["https://media1.giphy.com/media/3M4NpbLCTxBqU/giphy.gif"]});
+    }
 });
 
 botNewKid.login(TOKEN);
